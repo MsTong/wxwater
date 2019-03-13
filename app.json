@@ -1,0 +1,61 @@
+{
+  "debug": true,
+  "pages": [
+    "pages/setting/setting",
+    "pages/setting/setPhone/setPhone",
+    "pages/mine/mine",
+    "pages/cardBag/card/card",
+    "pages/cardBag/cardBag",
+    "pages/order/comment/comment",
+    "pages/order/scan/scan",
+    "pages/order/orderDetail/orderDetail",
+    "pages/addressdetail/addressdetail",
+    "pages/order/order",
+    "pages/order/waitorder/waitorder",
+    "pages/buywater/buywater",
+    "pages/address/address",
+    "pages/index/index",
+    "pages/areaManagement/areaManagement",
+    "pages/courier/courier",
+    "pages/order/doingorder/doingorder",
+    "pages/setting/setPsw/setPsw",
+    "pages/setting/setPayPsw/setPayPsw"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "富C健康长寿饮用水",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#f3f2f7",
+    "selectedColor": "red",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/home.png",
+        "selectedIconPath": "images/icon/home-actived.png"
+      },
+      {
+        "text": "订水",
+        "pagePath": "pages/buywater/buywater",
+        "iconPath": "images/icon/cart.png",
+        "selectedIconPath": "images/icon/cart-actived.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mine-actived.png"
+      },
+      {
+        "text": "配送员",
+        "pagePath": "pages/courier/courier",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mine-actived.png"
+      }
+    ]
+  }
+}

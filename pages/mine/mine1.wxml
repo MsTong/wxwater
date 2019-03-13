@@ -1,0 +1,83 @@
+<view class="container">
+  <view class="profile">
+    <view class='head-parent'>
+      <view class='header'>
+        <open-data class='userInfo' type="userAvatarUrl" bindgetuserinfo="onGotUserInfo"></open-data>
+      </view>
+      <view class='userNickName'>
+        <open-data type="userNickName" lang="zh_CN"></open-data>
+      </view>
+    </view>
+
+    <view class='vip-parent'>
+      <view class="vip-first">
+        <image src="/images/icon/vipimag.png"></image>
+        <text class='vipmessage'>当前会员等级:VIP3</text>
+      </view>
+      <view class="vip-two">
+        <text>充值为更高会员更多服务</text>
+      </view>
+    </view>
+
+    <view class='mymoney-parent'>
+      <text style='font-weight:700'>我的钱包</text>
+      <view class='mymony-contents'>
+        <view class='my-content'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text>充值</text>
+        </view>
+        <view class='my-content'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text>余额</text>
+        </view>
+        <view class='my-content'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text>提现</text>
+        </view>
+        <view class='fenge'>
+          <text>|</text>
+        </view>
+        <view class='saoyisao'>
+          <image src='/images/icon/saoyisao.png'></image>
+          <text>扫一扫</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='myorder-parent'>
+      <text style='font-weight:700'>我的订单</text>
+      <view class='myorder-contents'>
+        <view class='myorder-content'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text>已付款</text>
+        </view>
+        <view class='myorder-content' bindtap='towaitorder'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text>待配送</text>
+        </view>
+        <view class='myorder-content' bindtap='todoingorder'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text>配送中</text>
+        </view>
+        <view class='fenge'>
+          <text>|</text>
+        </view>
+        <view class='myorder-content' bindtap='toaddorder'>
+          <image src='/images/icon/mycontentimag.png'></image>
+          <text style='font-size:10px'>全部订单</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='my-list-parent' bindtap="toaddress">
+      <view class='my-list-icon'>
+        <image src="../../images/icon/address.png"></image>
+      </view>
+      <view class='my-list-content' style='margin-right:{{weight}}px'>
+        <text>配送地址</text>
+      </view>
+      <view class="my-ft">
+      </view>
+    </view>
+  </view>
+</view>

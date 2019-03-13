@@ -1,0 +1,39 @@
+<view class="container">
+    <view class='waters'>
+      <view class='waters-top'>
+      <view class='waters-top-noaddress' wx:if="{{!hasAddress}}" bindtap='selectAddress'>
+         <i-icon type="coordinates_fill" size="20" color="#19b161"></i-icon>
+        <text>选择收获地址</text>
+      </view>
+       <view class='waters-top-address' wx:if="{hasAddress}}" bindtap='selectAddress'>
+       <view class='waters-top-address-name'>
+        <text>{{defaultAddress.name}}</text>
+        <text>{{defaultAddress.phone}}</text>
+       </view>
+       <view class='waters-top-address-address'>
+        <text>{{defaultAddress.address}}</text>
+       </view>
+       <view class='waters-top-address-enter'>
+        <i-icon type="enter" size="28" color="#80848f"></i-icon>
+       </view>
+      </view>
+        <image class='waters-top-line' src='/images/icon/topBar.png'></image>
+      </view>
+      <view class='waters-content'>
+        <view class='waters-content-left'>
+          <image src='/images/icon/water.png'></image>
+          <view class='waters-content-left-info'>
+            <text>{{ type }}</text>
+          </view>
+        </view>
+        <view class='waters-content-right'>
+         <view class='waters-content-right-input'>
+        <i-input-number value="{{ count }}" min="0" max="100" bindchange="handleChange" />
+    </view>
+        </view>
+      </view>
+  </view>
+  <view class='waters-footer'>
+      <i-button bind:click="toOrder" type="primary" shape="circle" size="large">确认</i-button>
+      </view>
+</view>
