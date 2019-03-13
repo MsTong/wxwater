@@ -9,7 +9,11 @@ Page({
    */
   data: {
     default:0,
-    addressList:[]
+    addressList:[{
+      name:'chenyuqing',
+      phone:1234556788,
+      address:'四合院'
+    }]
   },
   setDefault(event) {
     //设置默认地址
@@ -44,20 +48,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    api._get('customer/getAddressList').then(res => {
-      if (res.code !== 0) {
-        $Toast({
-          content: res.msg
-        });
-      }
-      this.setData({ addressList: res.data.addressList })
-      console.log(res)
-    }).catch(e => {
-      $Toast({
-        content: e
-      });
-      console.log(e)
-    })
+    // api._get('customer/getAddressList').then(res => {
+    //   if (res.code !== 0) {
+    //     $Toast({
+    //       content: res.msg
+    //     });
+    //   }
+    //   this.setData({ addressList: res.data.addressList })
+    //   console.log(res)
+    // }).catch(e => {
+    //   $Toast({
+    //     content: e
+    //   });
+    //   console.log(e)
+    // })
   },
 
   /**

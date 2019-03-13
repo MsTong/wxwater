@@ -15,7 +15,7 @@ Page({
         jumpurl: '/pages/setting/setPsw/setPsw'
       }, {
         title: '修改/忘记支付密码',
-        jumpurl: '/pages/setting/setPayPsw/setPayPsw'
+        jumpurl: '/pages/setting/setPsw/setPsw?title=修改/忘记支付密码'
       }, {
         title: '地址管理',
         jumpurl: '/pages/address/address'

@@ -2,6 +2,7 @@
   "debug": true,
   "pages": [
     "pages/setting/setting",
+    "pages/setting/setPsw/setPsw",
     "pages/setting/setPhone/setPhone",
     "pages/mine/mine",
     "pages/cardBag/card/card",
@@ -18,7 +19,6 @@
     "pages/areaManagement/areaManagement",
     "pages/courier/courier",
     "pages/order/doingorder/doingorder",
-    "pages/setting/setPsw/setPsw",
     "pages/setting/setPayPsw/setPayPsw"
   ],
   "window": {
