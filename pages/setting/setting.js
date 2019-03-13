@@ -4,6 +4,7 @@ Page({
   /**
    * 页面的初始数据
    */
+  
   data: {
     phoneNumber:12345678909,
     settingList:[{
