@@ -1,4 +1,4 @@
-// pages/rechargeList/rechargeList.js
+// pages/rechargeList/member/memberPay/memberPay.js
 let app = getApp()
 Page({
 
@@ -6,42 +6,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    rechargeList: [{
-      title:'会员等级Lv1',
-      subtitle:'充值可享受1周免费送2桶',
-      money:290,
-      type:'member'
-    }, {
-        title: '会员等级Lv1',
-        subtitle: '充值可享受1周免费送2桶',
-        money: 290,
-        type: 'member'
-      }, {
-        title: '会员等级Lv1',
-        subtitle: '充值可享受1周免费送2桶',
-        money: 290,
-        type: 'points'
-      }]
-  },
-  toPurchase(event) {
-    console.log(event)
-    let nowItem = event.currentTarget.dataset.nowitem
-    let url = ''
-     app.data.nowItem = nowItem
-    if (nowItem.type ==='member') {
-      url = '/pages/rechargeList/member/member'
-    } else {
-      url = '/pages/myWallet/recharge/recharge'
+    nowItem:{
+      title:'222',
+      money:100
     }
-    wx.navigateTo({
-      url: url
-    })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (app.data.nowItem) {
+      this.setData({ nowItem: app.data.nowItem })
+    }
   },
 
   /**

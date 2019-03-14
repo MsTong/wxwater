@@ -1,39 +1,44 @@
 // pages/myWallet/recharge/recharge.js
-const { $Toast } = require('../../../dist/base/index');
+var app = getApp();
+const {
+  $Toast
+} = require('../../../dist/base/index');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    canInput:-1,
-    inputValue:'',
+    canInput: -1,
+    inputValue: '',
     selectArr: [{
       id: 1,
       name: '30吉币',
     }, {
       id: 2,
-        name: '60吉币'
+      name: '60吉币'
     }, {
       id: 3,
-        name: '150吉币'
+      name: '150吉币'
     }, {
       id: 4,
-        name: '300吉币',
-      }, {
-        id: 4,
-        name: '其他金额'
-      }],
-    current:'30吉币',
-    money:30,
-    position:'left'
+      name: '300吉币',
+    }, {
+      id: 4,
+      name: '其他金额'
+    }],
+    current: '30吉币',
+    money: 30,
+    position: 'left'
   },
-  handleSelect({ detail = {} }) {
-    if(detail.value==='其他金额') {
+  handleSelect({
+    detail = {}
+  }) {
+    if (detail.value === '其他金额') {
       this.setData({
-        current:detail.value,
-        money:0,
-        canInput:0
+        current: detail.value,
+        money: 0,
+        canInput: 0
       })
       return false
     }
@@ -42,14 +47,16 @@ Page({
       money: parseFloat(detail.value)
     });
   },
-  doInput({ detail }) {
+  doInput({
+    detail
+  }) {
     this.setData({
-      money:detail.value
+      money: detail.value
     })
   },
   toPay() {
     console.log(this.data.money)
-    if(this.data.money==0) {
+    if (this.data.money == 0) {
       console.log(this.data.money)
       $Toast({
         content: '请输入充值金额'
@@ -57,14 +64,42 @@ Page({
       return false
     }
     wx.navigateTo({
-      url: '/pages/myWallet/pay/pay?money='+this.data.money,
+      url: '/pages/myWallet/pay/pay?money=' + this.data.money,
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    let nowItem = app.data.nowItem
+    console.log(nowItem)
+    if (nowItem.type === 'points') {
+      //显示积分的充值
+      this.setData({
+        current: '30积分',
+        money: 30,
+        selectArr: [{
+          id: 1,
+          name: '30积分',
+        }, {
+          id: 2,
+          name: '60积分'
+        }, {
+          id: 3,
+          name: '150积分'
+        }, {
+          id: 4,
+          name: '300积分',
+        }, {
+          id: 4,
+          name: '其他金额'
+        }]
+      })
+      if ([30, 60, 150, 300].indexOf(nowItem.money) === -1) {
+        this.setData({
+          money: nowItem.money,
+          current: '其他金额',
+          canInput:0
+        })
+      }
+    }
   },
 
   /**
