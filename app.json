@@ -1,10 +1,12 @@
 {
   "debug": true,
   "pages": [
+    "pages/mine/mine",
+    "pages/myWallet/pay/pay",
+    "pages/myWallet/recharge/recharge",
     "pages/setting/setting",
     "pages/setting/setPsw/setPsw",
     "pages/setting/setPhone/setPhone",
-    "pages/mine/mine",
     "pages/cardBag/card/card",
     "pages/cardBag/cardBag",
     "pages/order/comment/comment",
@@ -18,8 +20,7 @@
     "pages/index/index",
     "pages/areaManagement/areaManagement",
     "pages/courier/courier",
-    "pages/order/doingorder/doingorder",
-    "pages/setting/setPayPsw/setPayPsw"
+    "pages/order/doingorder/doingorder"
   ],
   "window": {
     "backgroundTextStyle": "light",

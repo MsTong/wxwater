@@ -5,7 +5,7 @@ Page({
       itemArr: [{
         itemName: '充值',
         imagePath: '/images/mine/recharge.png',
-        url:'/pages/order/order'
+        url:'/pages/myWallet/recharge/recharge'
       }, {
         itemName: '余额',
         imagePath: '/images/mine/balance.png',

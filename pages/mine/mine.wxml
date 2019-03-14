@@ -8,7 +8,7 @@
         <open-data type="userNickName" lang="zh_CN"></open-data>
       </view>
     </view>
-    <view class='header-userlevel'>
+    <view class='header-userlevel' bindtap='to'>
       <view class='header-userlevel-line1'>
         <image src='/images/mine/level.png'></image>
         <text>当前会员等级{{level}}</text>
