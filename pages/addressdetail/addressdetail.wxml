@@ -16,7 +16,7 @@
       <view class='form-item' bindtap='selectRegion'>
         <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
           <view class="picker">
-            <text space="emsp">区 域：</text>{{region[0]}} {{region[1]}} {{region[2]}}
+            <text space="emsp">区 域：</text>{{region[0]}} {{region[1]}} {{region[2]}}       <image class='enterIcon' src='/images/icon/right-arrow.png'></image>
           </view>
         </picker>
       </view>

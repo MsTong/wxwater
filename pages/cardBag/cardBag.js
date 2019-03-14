@@ -1,4 +1,7 @@
 // pages/cardBag/cardBag.js
+const {
+  $Toast
+} = require('../../dist/base/index')
 Page({
 
   /**
@@ -54,6 +57,11 @@ Page({
     wx.navigateTo({
       url: '/pages/cardBag/card/card?title=' + e.currentTarget.dataset.type.title
     })
+  },
+  toGet(e) {
+    console.log(e)
+    //发出请求
+    $Toast({content:'领取成功'})
   },
   /**
    * 生命周期函数--监听页面加载

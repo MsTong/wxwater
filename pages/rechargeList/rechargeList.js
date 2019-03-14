@@ -17,7 +17,7 @@ Page({
         money: 290,
         type: 'member'
       }, {
-        title: '会员等级Lv1',
+        title: '积分充值',
         subtitle: '充值可享受1周免费送2桶',
         money: 290,
         type: 'points'

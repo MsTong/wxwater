@@ -8,8 +8,9 @@
     <view class='myCardBag-item-itemCard' wx:for='{{ item.itemArr }}' wx:key='{{ index }}'>
       <view class='myCardBag-item-card'>{{item.money}}</view>
       <view class='myCardBag-item-btn'>
-        <button>立即领取</button>
+        <button bindtap='toGet' data-item='{{item}}'>立即领取</button>
       </view>
     </view>
   </view>
 </view>
+<i-toast id="toast"/>

@@ -8,6 +8,7 @@ Page({
    */
   data: {
     hasAddress:true,
+    defaultAddress:{name:'tongling',phone:18814183794,address:'四合院'},
     count:0,
     type:'山泉水桶装水'
   },
@@ -24,37 +25,37 @@ Page({
       count:this.data.count,
       type: this.data.type
     }
-    api._get('customer/orderWater',params).then(res => {
-      if (res.code !== 0) {
-        $Toast({
-          content: res.msg
-        });
-      }
-      this.setData({ defaultAddress: res.data.addressList[0] })
-    }).catch(e => {
-      $Toast({
-        content: e
-      });
-      console.log(e)
-    })
+    // api._get('customer/orderWater',params).then(res => {
+    //   if (res.code !== 0) {
+    //     $Toast({
+    //       content: res.msg
+    //     });
+    //   }
+    //   this.setData({ defaultAddress: res.data.addressList[0] })
+    // }).catch(e => {
+    //   $Toast({
+    //     content: e
+    //   });
+    //   console.log(e)
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    api._get('customer/getAddressList').then(res => {
-      if (res.code !== 0) {
-        $Toast({
-          content: res.msg
-        });
-      }
-      this.setData({ defaultAddress: res.data.addressList[0] })
-    }).catch(e => {
-      $Toast({
-        content: e
-      });
-      console.log(e)
-    })
+    // api._get('customer/getAddressList').then(res => {
+    //   if (res.code !== 0) {
+    //     $Toast({
+    //       content: res.msg
+    //     });
+    //   }
+    //   this.setData({ defaultAddress: res.data.addressList[0] })
+    // }).catch(e => {
+    //   $Toast({
+    //     content: e
+    //   });
+    //   console.log(e)
+    // })
 
   },
 

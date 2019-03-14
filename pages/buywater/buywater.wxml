@@ -6,7 +6,7 @@
         <text>选择收获地址</text>
       </view>
        <view class='waters-top-address' wx:if="{hasAddress}}" bindtap='selectAddress'>
-       <view class='waters-top-address-name'>
+       <view class='waters-top-address-name'> 
         <text>{{defaultAddress.name}}</text>
         <text>{{defaultAddress.phone}}</text>
        </view>

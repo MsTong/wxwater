@@ -12,7 +12,7 @@
 <view class='date'><text>有效期到{{ item.limitDate }}</text></view>
 </view>
 <view class='card-btn'>
-  <button>立即购买</button>
+  <button bindtap='toPurchase'>立即购买</button>
 </view>
 </view>
 </view>

@@ -33,3 +33,6 @@
     </view>
   </view>
 </view>
+<i-modal title="客服电话" visible="{{ visible }}" bind:ok="handleClose" bind:cancel="handleClose">
+    <view>12345678789000</view>
+</i-modal>

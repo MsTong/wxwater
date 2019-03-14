@@ -33,7 +33,14 @@
   line-height: 45px;
   
 }
-
+.enterIcon {
+  width: 4vw;
+  height: 4vw;
+  margin: auto;
+  position: absolute;
+  right: 6vw;
+  top:2.4vh;
+}
 .saveBtn{
   position: fixed;
   left: 0;

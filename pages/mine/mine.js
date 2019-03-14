@@ -1,5 +1,6 @@
 Page({
   data: {
+    visible:false,
     contentArr: [{
       title: '我的钱包',
       itemArr: [{
@@ -9,17 +10,17 @@ Page({
       }, {
         itemName: '余额',
         imagePath: '/images/mine/balance.png',
-        url: '/pages/order/order'
+        url: ''
 
       }, {
         itemName: '提现',
         imagePath: '/images/mine/withdraw.png',
-          url: '/pages/order/order'
+          url: ''
 
 
       }, {
         itemName: '扫一扫',
-        imagePath: '/images/mine/sao.png'
+        imagePath: ''
 
       }]
     }, {
@@ -55,8 +56,8 @@ Page({
         url: '/pages/cardBag/cardBag'
       }, {
         itemName: '积分',
-        imagePath: '/images/mine/integration.png'
-
+        imagePath: '/images/mine/integration.png',
+        url:''
       }, {
         itemName: '设置',
         imagePath: '/images/mine/setting.png',
@@ -64,7 +65,8 @@ Page({
 
       }, {
         itemName: '客服',
-        imagePath: '/images/mine/service.png'
+        imagePath: '/images/mine/service.png',
+          url: ''
       }]
     }],
     userInfo: '',
@@ -83,6 +85,10 @@ Page({
   },
   toDetail(event) {
     console.log(event)
+    if (event.currentTarget.dataset.item.itemName==='客服') {
+      this.setData({ visible:true})
+      return false
+    }
     const jumpUrl = event.currentTarget.dataset.item.url
     wx.navigateTo({
       url: jumpUrl
@@ -107,5 +113,10 @@ Page({
     wx.navigateTo({
       url: "/pages/order/waitorder/waitorder"
     })
-  }
+  },
+  handleClose() {
+    this.setData({
+      visible: false
+    });
+  },
 })

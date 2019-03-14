@@ -44,7 +44,9 @@ Page({
     }
     this.setData({
       current: detail.value,
-      money: parseFloat(detail.value)
+      money: parseFloat(detail.value),
+      inputValue:'',
+      canInput:-1
     });
   },
   doInput({
@@ -96,7 +98,8 @@ Page({
         this.setData({
           money: nowItem.money,
           current: '其他金额',
-          canInput:0
+          canInput:0,
+          inputValue: nowItem.money
         })
       }
     }
@@ -127,7 +130,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    app.data.nowItem = ''
   },
 
   /**

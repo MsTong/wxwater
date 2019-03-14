@@ -41,7 +41,7 @@
   margin-bottom: 2vh;
 }
 .rechargeList-item-btn button {
-  width: 25vw;
+  /* width: 25vw;
   font-size: 4vw;
   height: 5vh;
   line-height: 5vh;
@@ -50,5 +50,16 @@
   color: #fff;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 0; */
+  width: 20vw;
+  height: 4vh;
+  background: #ff9900;
+  border-radius: 4px;
+  font-size: 3vw;
+  text-align: center;
+  line-height: 4vh;
+  margin: 1.5vh 0;
+  float: right;
+  color: #fff;
+  padding: 0;
 }
