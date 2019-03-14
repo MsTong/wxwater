@@ -71,6 +71,11 @@ Page({
     level:1,
     weight: wx.getSystemInfoSync().windowWidth - 220
   },
+  torecharge() {
+    wx.navigateTo({
+      url: '/pages/rechargeList/rechargeList',
+    })
+  },
   onLoad: function (options) {
 
   },

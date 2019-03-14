@@ -1,6 +1,7 @@
 {
   "debug": true,
   "pages": [
+    "pages/rechargeList/rechargeList",
     "pages/mine/mine",
     "pages/myWallet/pay/pay",
     "pages/myWallet/recharge/recharge",

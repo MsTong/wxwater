@@ -1,0 +1,16 @@
+<!--pages/rechargeList/rechargeList.wxml-->
+<view class='rechargeList'>
+  <view class='rechargeList-item'>
+    <view class='rechargeList-item-content'>
+    <image  class='l-f' src='/images/icon/member.jpg'></image>
+    <view class='l-f'>
+      <text>会员等级</text>
+      <text>会员等级</text>
+      <text>会员等级</text>
+    </view>
+    </view>
+    <view class='rechargeList-item-btn'>
+    <button>立即购买</button>
+    </view>
+  </view>
+</view>
