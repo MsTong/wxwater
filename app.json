@@ -17,11 +17,12 @@
     "pages/addressdetail/addressdetail",
     "pages/order/order",
     "pages/order/waitorder/waitorder",
-    "pages/buywater/buywater",
     "pages/address/address",
     "pages/index/index",
     "pages/areaManagement/areaManagement",
-    "pages/order/doingorder/doingorder"
+    "pages/order/doingorder/doingorder",
+    "pages/waterList/buywater/buywater",
+    "pages/waterList/waterList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,7 +43,7 @@
       },
       {
         "text": "订水",
-        "pagePath": "pages/buywater/buywater",
+        "pagePath": "pages/waterList/waterList",
         "iconPath": "images/icon/cart.png",
         "selectedIconPath": "images/icon/cart-actived.png"
       },

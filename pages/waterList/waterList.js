@@ -10,7 +10,28 @@ Page({
     hasAddress:true,
     defaultAddress:{name:'tongling',phone:18814183794,address:'四合院'},
     count:0,
-    type:'山泉水桶装水'
+    type:'山泉水桶装水',
+    waterList:[{
+      type:'山泉水桶装水',
+      imagePath:'',
+      id:1
+    }, {
+        type: '山泉水桶装水',
+        imagePath: '',
+        id: 1
+      }, {
+        type: '山泉水桶装水',
+        imagePath: '',
+        id: 1
+      }, {
+        type: '山泉水桶装水',
+        imagePath: '',
+        id: 1
+      }, {
+        type: '山泉水桶装水',
+        imagePath: '',
+        id: 1
+      }]
   },
   selectAddress() {
     wx.navigateTo({ url: '/pages/address/address' })
@@ -25,19 +46,9 @@ Page({
       count:this.data.count,
       type: this.data.type
     }
-    // api._get('customer/orderWater',params).then(res => {
-    //   if (res.code !== 0) {
-    //     $Toast({
-    //       content: res.msg
-    //     });
-    //   }
-    //   this.setData({ defaultAddress: res.data.addressList[0] })
-    // }).catch(e => {
-    //   $Toast({
-    //     content: e
-    //   });
-    //   console.log(e)
-    // })
+    wx.navigateTo({
+      url: '/pages/waterList/buywater/buywater'
+    })
   },
   /**
    * 生命周期函数--监听页面加载
